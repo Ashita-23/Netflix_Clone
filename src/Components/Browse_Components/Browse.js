@@ -11,10 +11,8 @@ const Browse = ()=>{
     const [nowPopuler,setNowPopuler] = useState()
     const [nowTOP_RATED ,setNowTOP_RATED ] = useState()
     const [nowUP_COMING ,setUP_COMING ] = useState()
-// console.log(nowPlaying ,"nowPlaying")
-// console.log(nowPopuler ,"nowPopuler")
-// console.log(nowPlaying?.results[0] ,"nowPlaying")
-console.log(nowUP_COMING ,"nowUP_COMING")
+
+// console.log(nowUP_COMING ,"nowUP_COMING")
     useEffect(()=>{
         getNOW_PLAYING()
         getPopuler ()

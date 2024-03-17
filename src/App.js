@@ -3,16 +3,22 @@ import './App.css';
 import Browse from './Components/Browse_Components/Browse'
 import Navigation from './Components/Browse_Components/header';
 import DoSearchPage from "./Components/Browse_Components/doSearchPage"
+import {  useSelector } from 'react-redux';
+
 
 
 
 
 function App() {
+
+  const togglePage = useSelector((store)=>store.Search_Toggel.IsShow)
+  // console.log(togglePage,"togglePage")
+
   return (<>
-  {/* <SignIn/> */}
 <Navigation></Navigation>
-  {/* <Browse></Browse> */}
-  <DoSearchPage></DoSearchPage>
+{
+  togglePage? <Browse></Browse>: <DoSearchPage></DoSearchPage>
+}
 
   </>  );
 }
