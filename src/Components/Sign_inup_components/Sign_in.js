@@ -31,6 +31,7 @@ const SignIn = () => {
           <div className=" bg-black p-6">
             <FooterCards/>
             <FooterQues/>
+            <div className="text-white flex justify-center p-1 mt-[3.5rem]"><p className="text-sm  ">Netflix Clone {"( CHALCHITRA )"} <i className="fa-regular fa-copyright text-sm "></i> 2024</p></div>
           </div>
         </div>
        </>)
