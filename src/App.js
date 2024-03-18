@@ -1,9 +1,9 @@
-// import SignIn from './Components/Sign_in_components/Sign_in';
+import SignIn from './Components/Sign_inup_components/Sign_in';
 import './App.css';
-import Browse from './Components/Browse_Components/Browse'
+// import Browse from './Components/Browse_Components/Browse'
 import Navigation from './Components/Browse_Components/header';
-import DoSearchPage from "./Components/Browse_Components/doSearchPage"
-import {  useSelector } from 'react-redux';
+// import DoSearchPage from "./Components/Browse_Components/doSearchPage"
+// import {  useSelector } from 'react-redux';
 
 
 
@@ -11,14 +11,15 @@ import {  useSelector } from 'react-redux';
 
 function App() {
 
-  const togglePage = useSelector((store)=>store.Search_Toggel.IsShow)
+  // const togglePage = useSelector((store)=>store.Search_Toggel.IsShow)
   // console.log(togglePage,"togglePage")
 
   return (<>
 <Navigation></Navigation>
-{
+<SignIn></SignIn>
+{/* {
   togglePage? <Browse></Browse>: <DoSearchPage></DoSearchPage>
-}
+} */}
 
   </>  );
 }
