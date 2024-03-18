@@ -74,10 +74,10 @@ export const acordionData= [
     {
         key:"ACC01",
         hText:"What is Netflix ?",
-        bText:"Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price.There's always something new to discover, and new TV shows and movies are added every week!"
+        bText:"Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.There's always something new to discover, and new TV shows and movies are added every week!"
     },
     {
-        key:"ACC02",
+        key:"ACC02", 
         hText:"How much dose netflix cost ?",
         bText:"Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹649 to ₹149 a month. No extra costs, no contracts."
     },
