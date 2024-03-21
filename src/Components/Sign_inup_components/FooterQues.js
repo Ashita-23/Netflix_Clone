@@ -5,7 +5,7 @@ import {ShowAccordion} from "../../RStore/accordionToggle"
 const FooterQues = ()=>{
     const IsOpen = useSelector((store)=>store.Accordion_Toggle.IsOpen)
     const dispatch =useDispatch()
-    console.log(IsOpen,"ADFS")
+    // console.log(IsOpen,"ADFS")
     return(<div className="mt-[2rem]  flex justify-center" >
     <div className="w-[60%] flex flex-col  ">
         <h1 className="text-white p-2 text-3xl font-semibold mb-1">Frequently Asked Questions</h1>

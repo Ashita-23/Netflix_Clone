@@ -1,26 +1,51 @@
-import SignIn from './Components/Sign_inup_components/Sign_in';
 import './App.css';
-// import Browse from './Components/Browse_Components/Browse'
-import Navigation from './Components/Browse_Components/header';
-// import DoSearchPage from "./Components/Browse_Components/doSearchPage"
-// import {  useSelector } from 'react-redux';
-
-
+import { RouterProvider, createBrowserRouter} from 'react-router-dom';
+import SignIn from './Components/Sign_inup_components/Sign_in';
+// import Navigation from './Components/Browse_Components/header';
+import BrowseComponent from './BrowserComponent';
+import { onAuthStateChanged } from 'firebase/auth';
+import { useEffect } from 'react';
+import { auth } from './utils/firebase';
+import { useDispatch } from 'react-redux';
+import { AddUser, RemoveUser } from './RStore/userSlice';
 
 
 
 function App() {
 
-  // const togglePage = useSelector((store)=>store.Search_Toggel.IsShow)
-  // console.log(togglePage,"togglePage")
+  const dispatch=useDispatch()
+
+const AppRouter = createBrowserRouter([
+  {path:"/",
+   element:<SignIn></SignIn>},
+   {
+    path:"/browse",
+    element:<BrowseComponent/>
+   }
+])
+
+useEffect(()=>{
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/auth.user
+      const {uid,email,displayName} = user;
+      // ...
+      dispatch(AddUser({uid:uid,email:email,displayName:displayName}))
+      
+    } else {
+      // User is signed out
+      // ...
+      dispatch(RemoveUser())
+      
+    }
+  });
+},[])
+
 
   return (<>
-<Navigation></Navigation>
-<SignIn></SignIn>
-{/* {
-  togglePage? <Browse></Browse>: <DoSearchPage></DoSearchPage>
-} */}
 
+<RouterProvider router={AppRouter}></RouterProvider>
   </>  );
 }
 
