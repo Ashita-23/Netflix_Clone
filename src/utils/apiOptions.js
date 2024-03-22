@@ -7,7 +7,8 @@
       Authorization:  'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ZWRjMjEwYzA3MzI5Zjk1ZDYwNTdlOGFjZmY5NjMyMSIsInN1YiI6IjY1ZTk4YWJhYWY5NTkwMDE4NGRjZmJkYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.wY9ipfnxNBzZ4i0-lF0Pj3xrRwNdWshCQ1u61oAe1TE',
     }
   };
-  
+  export const SEARCH_QUERY = "https://api.themoviedb.org/3/search/movie?query="
+  export const Movie_Trailer=`https://api.themoviedb.org/3/movie/{movie_id}/videos`
   export const POSTER_API="https://image.tmdb.org/t/p/w500"
   export const  NOW_PLAYING_API ='https://api.themoviedb.org/3/movie/now_playing?&page=1'
   export const POPULER_API = " https://api.themoviedb.org/3/movie/popular"
