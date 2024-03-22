@@ -1,12 +1,6 @@
 
-    // const regex = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/
-    // const passwordRegex = "^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$"
-    // const FNameRegex="^[A-Za-z][A-Za-z0-9_]{7,29}$"
 export const SignUpValidation=(name,email,password)=>{
-    // const UserNameRegex="/^[A-Za-z][A-Za-z0-9_]{7,29}$/"
-    // let EmailRegex = '/^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/'
-    // const PasswordRegex = "/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/"
-     
+
     // const Name = /^[a-zA-Z]+$/.test(name)
     const Email =  /^[a-zA-Z0-9]+@+[a-zA-Z0-9]+.+[A-z]/.test(email)
     const Password = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/.test(password)
