@@ -11,7 +11,7 @@ const UserSlice = createSlice({
         state.items.push(action.payload)
         },
         RemoveUser:(state,action)=>{
-       return null
+       return []
         },
 
     }
