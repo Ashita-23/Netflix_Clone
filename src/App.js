@@ -1,5 +1,5 @@
 import './App.css';
-import { RouterProvider, createBrowserRouter} from 'react-router-dom';
+import {  RouterProvider, createBrowserRouter} from 'react-router-dom';
 import SignIn from './Components/Sign_inup_components/Sign_in';
 // import Navigation from './Components/Browse_Components/header';
 import BrowseComponent from './BrowserComponent';
@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 import { auth } from './utils/firebase';
 import { useDispatch } from 'react-redux';
 import { AddUser, RemoveUser } from './RStore/userSlice';
+// import Navigation from './Components/Browse_Components/header';
 
 
 
@@ -43,10 +44,9 @@ useEffect(()=>{
 },[])
 
 
-  return (<>
-
-<RouterProvider router={AppRouter}></RouterProvider>
-  </>  );
+  return (<div>
+<RouterProvider router={AppRouter}/>
+  </div>  );
 }
 
 export default App;
