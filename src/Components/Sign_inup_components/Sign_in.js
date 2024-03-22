@@ -82,14 +82,14 @@ const SignIn = () => {
                    <p className="text-2xl font-bold text-white my-2">Sign Up</p>
                     <input type="text" ref={name} placeholder="Enter Your Name.." className="text-md rounded-md p-2 my-2"/>
                     <input type="email" ref={email} placeholder="Enter Your Email.." className="text-md rounded-md p-2 my-2"/>
-                    <input  type="password" ref={password} placeholder="Enter Your Password" className="text-md rounded-md p-2 my-2"/>
+                    <input  type="password" autoComplete="on" ref={password} placeholder="Enter Your Password" className="text-md rounded-md p-2 my-2"/>
                     <p className="text-[0.8rem] text-red-500 p-1 m-1">{VSU_Message}</p>
                     <button className="text-md bg-red-600 text-white rounded-md p-2 my-2" onClick={()=>SignUpHandler()}>Sign up</button>
                 </form>:
                 <form  onSubmit={(e)=>e.preventDefault()}  className="border border-red-600  w-[20rem] px-4 py-2 rounded-md bg-black flex flex-col justify-evenly item-center  ">
                   <p className="text-2xl font-bold text-white my-2">Sign In</p>
                     <input type="email" ref={INemail} placeholder="Enter Your Email.." className="text-md rounded-md p-2 my-2"/>
-                    <input  type="password" ref={INpassword} placeholder="Enter Your Password" className="text-md rounded-md p-2 my-2"/>
+                    <input  type="password" autoComplete="on" ref={INpassword} placeholder="Enter Your Password" className="text-md rounded-md p-2 my-2"/>
                     <p className="text-[0.8rem] text-red-500 p-1 m-1">{VSI_Message}</p>
 
                     <button className="text-md bg-red-600 text-white rounded-md p-2 my-2" onClick={()=>SignInHandler()}>Sign in</button>
